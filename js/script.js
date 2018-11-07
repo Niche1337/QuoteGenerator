@@ -5,17 +5,19 @@ FSJS project 1 - A Random Quote Generator
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-
-  Recommended: 
-    - Add at least one `year` and/or `citation` property to at least one 
-      quote object.
-***/
-
+/*Array of objects containing quotes, authors, year of publication and citations */
+var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', author: "Dr.Seuss"
+              },
+              {quote: '“Hardest of all, as one becomes older, is to accept that sapient remarks can be drawn from the most unwelcome or seemingly improbable sources, and that the apparently more trustworthy sources can lead one astray.”',
+               author: "Christopher Hitchens",citation:"Hitch 22: A Memoir"
+              },
+              {quote: 'Nature can be lethal. But it doesn\'t hold a candle to man."', author: "Samuel L.Jackson", citation:"Deep Blue Sea"
+              },
+              {quote: 'I never look back darling, it distracts from the now."', author: "Edna Mode", citation:"The Incredibles"
+              },
+              {quote: '"It is well to give when asked but it is better to give unasked, through understanding."', author: "Kahil Gibran", year:1923, citation:"The Prophet"
+              },
+            ]
 
 
 
