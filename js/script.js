@@ -20,21 +20,13 @@ var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened
             ];
 
 
-
-/***
-  Create the `getRandomQuote` function to:
-   - generate a random number 
-   - use the random number to `return` a random quote object from the 
-     `quotes` array.
-***/
-
+/* The function gets a random quote object from the quotes array and returns the value */
 function getRandomQuote(quotes) {
 	var randomNum = Math.floor(Math.random() * Math.floor(quotes.length));
-	return quotes[randomNum].quote;
+	return quotes[randomNum];
 }
 
 console.log(getRandomQuote(quotes));
-
 
 /***
   Create the `printQuote` function to: 
@@ -46,7 +38,20 @@ console.log(getRandomQuote(quotes));
    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function printQuote() {
+	var htmlText;
+	var quoteObj = getRandomQuote(quotes);
+	htmlText = '<p class="quote"> quoteObj.quote </p>';
+	htmlText += '<p class="source"> quoteObj.author';
+	if (quoteObj.citation !== null) {
+		htmlText += '<span class="citation"> quoteObj.citation </span>'
+	}
+	if (quoteObj.year !== null) {
+		htmlText += '<span class="year"> quoteObj.year </span>'
+	}
+	htmlText += '</p>'
 
+}
 
 
 /***
