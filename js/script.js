@@ -17,7 +17,7 @@ var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened
               },
               {quote: '"It is well to give when asked but it is better to give unasked, through understanding."', author: "Kahil Gibran", year:1923, citation:"The Prophet"
               },
-            ]
+            ];
 
 
 
@@ -28,7 +28,12 @@ var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened
      `quotes` array.
 ***/
 
+function getRandomQuote(quotes) {
+	return Math.floor(Math.random() * Math.floor(quotes.length));
+	
+}
 
+console.log(getRandomQuote(quotes));
 
 
 /***
