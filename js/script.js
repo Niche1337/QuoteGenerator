@@ -30,6 +30,8 @@ function printQuote() {
 	var htmlText;
 	var randomColour ="#" + Math.floor(100000 + Math.random() * 900000)
 	var quoteObj = getRandomQuote(quotes);
+
+	//creates the html string
 	htmlText = '<p class="quote">' + quoteObj.quote + '</p>';
 	htmlText += '<p class="source">' + quoteObj.author;
 	if (quoteObj.citation != null) {
@@ -42,12 +44,17 @@ function printQuote() {
 		htmlText += '<span class="year">' + quoteObj.tag + '</span>';
 	}
 	htmlText += '</p>'
-	document.getElementById("quote-box").innerHTML = htmlText;
-	document.getElementById("theBody").style.background = randomColour;
 
+	//prints the html string to the inner html
+	document.getElementById("quote-box").innerHTML = htmlText;
+	//when a new quote is generated, a random colour is chosen for the background
+	document.getElementById("theBody").style.background = randomColour;
 
 }
 
-
 /* Runs the printsQuote function when the button is pressed*/
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+/*After 10 seconds a new quote will be generated using a timer*/
+timeoutID = window.setTimeout(printQuote, 10000);
+
