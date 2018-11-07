@@ -43,16 +43,16 @@ function printQuote() {
 	var quoteObj = getRandomQuote(quotes);
 	htmlText = '<p class="quote"> quoteObj.quote </p>';
 	htmlText += '<p class="source"> quoteObj.author';
-	if (quoteObj.citation !== null) {
+	if (quoteObj.citation != null) {
 		htmlText += '<span class="citation"> quoteObj.citation </span>'
 	}
-	if (quoteObj.year !== null) {
+	if (quoteObj.year != null) {
 		htmlText += '<span class="year"> quoteObj.year </span>'
 	}
 	htmlText += '</p>'
-
+	console.log(htmlText)
 }
-
+printQuote()
 
 /***
   When the "Show another quote" button is clicked, the event listener 
