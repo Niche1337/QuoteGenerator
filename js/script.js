@@ -29,8 +29,8 @@ var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened
 ***/
 
 function getRandomQuote(quotes) {
-	return Math.floor(Math.random() * Math.floor(quotes.length));
-	
+	var randomNum = Math.floor(Math.random() * Math.floor(quotes.length));
+	return quotes[randomNum].quote;
 }
 
 console.log(getRandomQuote(quotes));
