@@ -1,6 +1,7 @@
-
-
-
+/*Quotes Generator Project*/
+/******************************************/
+/******************************************/
+/******************************************/
 
 /*Array of objects containing quotes, authors, year of publication and citations */
 var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', author: "Dr.Seuss", tag: "Profound"
@@ -23,10 +24,11 @@ function getRandomQuote(quotes) {
 	return quotes[randomNum];
 }
 
-console.log(getRandomQuote(quotes));
-
+/* The printQuote function gets a random quote object from the getRandomQuote function. 
+It then creates a html string using what values it has stored within it, which is used to be printed onto the html page. */
 function printQuote() {
 	var htmlText;
+	var randomColour ="#" + Math.floor(100000 + Math.random() * 900000)
 	var quoteObj = getRandomQuote(quotes);
 	htmlText = '<p class="quote">' + quoteObj.quote + '</p>';
 	htmlText += '<p class="source">' + quoteObj.author;
@@ -41,7 +43,11 @@ function printQuote() {
 	}
 	htmlText += '</p>'
 	document.getElementById("quote-box").innerHTML = htmlText;
-}
-printQuote();
+	document.getElementById("theBody").style.background = randomColour;
 
+
+}
+
+
+/* Runs the printsQuote function when the button is pressed*/
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
