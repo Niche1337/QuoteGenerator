@@ -3,17 +3,17 @@
 /******************************************/
 /******************************************/
 
-/*Array of objects containing quotes, authors, year of publication and citations */
-var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', author: "Dr.Seuss", tag: "Profound"
+/*Array of objects containing quotes, sources, year of publication and citations */
+var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', source: "Dr.Seuss", tag: "Profound"
               },
               {quote: '“Hardest of all, as one becomes older, is to accept that sapient remarks can be drawn from the most unwelcome or seemingly improbable sources, and that the apparently more trustworthy sources can lead one astray.”',
-               author: "Christopher Hitchens",citation:"Hitch 22: A Memoir"
+               source: "Christopher Hitchens",citation:"Hitch 22: A Memoir"
               },
-              {quote: 'Nature can be lethal. But it doesn\'t hold a candle to man."', author: "Samuel L.Jackson", citation:"Deep Blue Sea", tag: "Humour"
+              {quote: 'Nature can be lethal. But it doesn\'t hold a candle to man."', source: "Samuel L.Jackson", citation:"Deep Blue Sea", tag: "Humour"
               },
-              {quote: 'I never look back darling, it distracts from the now."', author: "Edna Mode", citation:"The Incredibles"
+              {quote: 'I never look back darling, it distracts from the now."', source: "Edna Mode", citation:"The Incredibles"
               },
-              {quote: '"It is well to give when asked but it is better to give unasked, through understanding."', author: "Kahil Gibran", year:1923, citation:"The Prophet"
+              {quote: '"It is well to give when asked but it is better to give unasked, through understanding."', source: "Kahil Gibran", year:1923, citation:"The Prophet"
               },
             ];
 
@@ -33,7 +33,7 @@ function printQuote() {
 
 	//creates the html string
 	htmlText = '<p class="quote">' + quoteObj.quote + '</p>';
-	htmlText += '<p class="source">' + quoteObj.author;
+	htmlText += '<p class="source">' + quoteObj.source;
 	if (quoteObj.citation != null) {
 		htmlText += '<span class="citation">' + quoteObj.citation + '</span>'
 	}
