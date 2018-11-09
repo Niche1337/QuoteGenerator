@@ -4,7 +4,7 @@
 /******************************************/
 
 /*Array of objects containing quotes, sources, year of publication and citations */
-var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', source: "Dr.Seuss", tag: "Profound"
+const quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened."', source: "Dr.Seuss", tag: "Profound"
               },
               {quote: '“Hardest of all, as one becomes older, is to accept that sapient remarks can be drawn from the most unwelcome or seemingly improbable sources, and that the apparently more trustworthy sources can lead one astray.”',
                source: "Christopher Hitchens",citation:"Hitch 22: A Memoir"
@@ -19,14 +19,14 @@ var quotes = [{quote: '"Don\'t cry because it\'s over, smile because it happened
 
 
 /* The function gets a random quote object from the quotes array and returns the value */
-function getRandomQuote(quotes) {
+const getRandomQuote = quotes => {
 	var randomNum = Math.floor(Math.random() * Math.floor(quotes.length));
 	return quotes[randomNum];
 }
 
 /* The printQuote function gets a random quote object from the getRandomQuote function. 
 It then creates a html string using what values it has stored within it, which is used to be printed onto the html page. */
-function printQuote() {
+const printQuote = () => {
 	var htmlText;
 	var randomColour ="#" + Math.floor(100000 + Math.random() * 900000)
 	var quoteObj = getRandomQuote(quotes);
